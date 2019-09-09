@@ -1,0 +1,27 @@
+version: "3"
+services:
+  nginx:
+    restart: always
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./nginx
+    ports:
+      - "3050:80"
+  client:
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./client
+    volumes:
+      - /usr/src/app/node_modules
+      - ./client:/usr/src/app
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+  api:
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./api
+    volumes:
+      - /usr/src/app/node_modules
+      - ./api:/usr/src/app
+    environment:
+      - CHOKIDAR_USEPOLLING=true

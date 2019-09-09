@@ -1,0 +1,11 @@
+.googleButton {
+  width: 100%;
+}
+
+.googleButton svg {
+  vertical-align: middle;
+}
+
+.googleButton span {
+  padding: 12px 10px 10px 53px !important;
+}

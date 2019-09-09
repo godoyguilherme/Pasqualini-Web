@@ -1,0 +1,3 @@
+.ant-menu.ant-menu-dark .ant-menu-item-selected.customclass {
+  background: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);
+}
