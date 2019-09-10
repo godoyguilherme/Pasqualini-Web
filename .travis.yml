@@ -3,12 +3,12 @@ services:
   - docker
 
 script:
-  - docker build -t pasqualini/client ./client
-  - docker build -t pasqualini/api ./api
-  - docker build -t pasqualini/nginx ./nginx
+  - docker build -t guilhermegpg/pasqualini-client ./client
+  - docker build -t guilhermegpg/pasqualini-api ./api
+  - docker build -t guilhermegpg/pasqualini-nginx ./nginx
 
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
-  - docker push pasqualini/client
-  - docker push pasqualini/api
-  - docker push pasqualini/nginx
+  - docker push guilhermegpg/pasqualini-client
+  - docker push guilhermegpg/pasqualini-api
+  - docker push guilhermegpg/pasqualini-nginx
