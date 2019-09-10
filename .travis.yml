@@ -1,0 +1,14 @@
+sudo: required
+services:
+  - docker
+
+script:
+  - docker build -t pasqualini/client ./client
+  - docker build -t pasqualini/api ./api
+  - docker build -t pasqualini/nginx ./nginx
+
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+
+  - docker push pasqualini/client
+  - docker push pasqualini/api
+  - docker push pasqualini/nginx
