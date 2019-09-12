@@ -19,7 +19,7 @@ export const googleLogin = userProfile => async dispatch => {
   if (from) {
     return history.push(from);
   }
-  history.push("/admin");
+  history.push("/");
 };
 
 export const basicLogin = () => async dispatch => {
@@ -30,7 +30,7 @@ export const basicLogin = () => async dispatch => {
   if (from) {
     return history.push(from);
   }
-  history.push("/admin");
+  history.push("/");
 };
 
 export const logout = () => async dispatch => {

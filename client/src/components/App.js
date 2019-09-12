@@ -13,7 +13,7 @@ const App = () => {
     <Router history={history}>
       <Switch>
         <Route exact path="/login" component={Login} />
-        <PrivateRoute path="/admin" component={DashApp} />
+        <PrivateRoute exact path="/" component={DashApp} />
         <Route component={NotFound} />
       </Switch>
     </Router>
