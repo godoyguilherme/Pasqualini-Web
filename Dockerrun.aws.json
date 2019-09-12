@@ -5,13 +5,15 @@
       "name": "client",
       "image": "guilhermegpg/pasqualini-client",
       "hostname": "client",
-      "essential": false
+      "essential": false,
+      "memory": 128
     },
     {
       "name": "api",
       "image": "guilhermegpg/pasqualini-api",
       "hostname": "api",
-      "essential": false
+      "essential": false,
+      "memory": 128
     },
     {
       "name": "nginx",
@@ -23,7 +25,8 @@
           "containerPort": 80
         }
       ],
-      "links": ["client", "api"]
+      "links": ["client", "api"],
+      "memory": 128
     }
   ]
 }
